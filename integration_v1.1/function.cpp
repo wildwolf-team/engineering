@@ -17,28 +17,24 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
     {
         if(count.size()==1)
         {
-            if((count[0].x+count[0].br().x)/2 < 530)//640需要改成转换后的值
+            if((count[0].x+count[0].br().x)/2 < 495)//640需要改成转换后的值
             {
                 SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,0);
             }
-            else if((count[0].x+count[0].br().x)/2 > 550)
+            else if((count[0].x+count[0].br().x)/2 > 505)
             {
                 SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,1);
             }
-            else  //531- 550
-            {   if((count[0].x+count[0].br().x)/2 >= 530 && (count[0].x+count[0].br().x)/2 <= 537)
-                    SerialPort::RMserialWrite(534,0,0,-1);
-                else if((count[0].x+count[0].br().x)/2>=538 && (count[0].x+count[0].br().x)/2<=542)
-                    SerialPort::RMserialWrite(540,0,0,-1);
-                else if((count[0].x+count[0].br().x)/2>=543 && (count[0].x+count[0].br().x)/2<=550)
-                    SerialPort::RMserialWrite(547,0,0,-1);
+            else  
+            {   
+                SerialPort::RMserialWrite(500,0,0,-1);
             }
             cout<<(count[0].x+count[0].br().x)/2<<endl;
             return 1;
         }
         else if(count.size()==0)
         {
-            SerialPort::RMserialWrite(540,0,0,-1);
+            SerialPort::RMserialWrite(500,0,0,-1);
             return -1;
         }
         else
@@ -46,9 +42,9 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
             int temp=img.rows,num_index=-1;
             for(int i=0;i<count.size();i++)
             {
-                if(abs((count[i].x+count[i].br().x)/2 - 540)<temp)//640记得改
+                if(abs((count[i].x+count[i].br().x)/2 - 495)<temp)//640记得改
                 {
-                    temp = abs((count[i].x+count[i].br().x)/2 - 540);
+                    temp = abs((count[i].x+count[i].br().x)/2 - 495);
                     num_index = i;
                 }
             }
@@ -56,22 +52,17 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
             {   
                 rectangle(img_src, count[num_index], cv::Scalar(0, 0, 255), 2);
                 cout<<(count[num_index].x+count[num_index].br().x)/2<<endl;
-                if((count[num_index].x+count[num_index].br().x)/2<540)
+                if((count[num_index].x+count[num_index].br().x)/2<495)
                 {
                     SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,0);
                 }
-                else if((count[num_index].x+count[num_index].br().x)/2>540)
+                else if((count[num_index].x+count[num_index].br().x)/2>505)
                 {
                     SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,1);
                 }
                 else
                 {
-                    if((count[0].x+count[0].br().x)/2 >= 530 && (count[0].x+count[0].br().x)/2 <= 537)
-                        SerialPort::RMserialWrite(534,0,0,-1);
-                    else if((count[0].x+count[0].br().x)/2>=538 && (count[0].x+count[0].br().x)/2<=542)
-                        SerialPort::RMserialWrite(540,0,0,-1);
-                    else if((count[0].x+count[0].br().x)/2>=543 && (count[0].x+count[0].br().x)/2<=550)
-                        SerialPort::RMserialWrite(547,0,0,-1);
+                    SerialPort::RMserialWrite(500,0,0,-1);
                 }
                 cout<<(count[0].x+count[0].br().x)/2<<endl;
                 return 1;
@@ -79,7 +70,7 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
             }
             else
             {
-                SerialPort::RMserialWrite(540,0,0,-1);
+                SerialPort::RMserialWrite(500,0,0,-1);
                 return -1;
             }
             
