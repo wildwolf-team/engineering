@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/oyc/git/origen_v2.4/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DFMT_LOCALE -I/home/oyc/git/origen_v2.4/./include -isystem /usr/local/include/opencv4  -g   -std=gnu++14 -o CMakeFiles/main.dir/main.cpp.o -c /home/oyc/git/origen_v2.4/main.cpp",
+  "file": "/home/oyc/git/origen_v2.4/main.cpp"
+},
+{
+  "directory": "/home/oyc/git/origen_v2.4/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DFMT_LOCALE -I/home/oyc/git/origen_v2.4/./include -isystem /usr/local/include/opencv4  -g   -std=gnu++14 -o CMakeFiles/main.dir/mv_video_capture.cpp.o -c /home/oyc/git/origen_v2.4/mv_video_capture.cpp",
+  "file": "/home/oyc/git/origen_v2.4/mv_video_capture.cpp"
+},
+{
+  "directory": "/home/oyc/git/origen_v2.4/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DFMT_LOCALE -I/home/oyc/git/origen_v2.4/./include -isystem /usr/local/include/opencv4  -g   -std=gnu++14 -o CMakeFiles/main.dir/function.cpp.o -c /home/oyc/git/origen_v2.4/function.cpp",
+  "file": "/home/oyc/git/origen_v2.4/function.cpp"
+},
+{
+  "directory": "/home/oyc/git/origen_v2.4/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DFMT_LOCALE -I/home/oyc/git/origen_v2.4/./include -isystem /usr/local/include/opencv4  -g   -std=gnu++14 -o CMakeFiles/main.dir/serialport.cpp.o -c /home/oyc/git/origen_v2.4/serialport.cpp",
+  "file": "/home/oyc/git/origen_v2.4/serialport.cpp"
+}
+]
