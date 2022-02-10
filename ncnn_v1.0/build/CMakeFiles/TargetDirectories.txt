@@ -1,3 +1,0 @@
-/home/oyc/git/nanodet/demo_ncnn/build/CMakeFiles/rebuild_cache.dir
-/home/oyc/git/nanodet/demo_ncnn/build/CMakeFiles/edit_cache.dir
-/home/oyc/git/nanodet/demo_ncnn/build/CMakeFiles/nanodet_demo.dir
