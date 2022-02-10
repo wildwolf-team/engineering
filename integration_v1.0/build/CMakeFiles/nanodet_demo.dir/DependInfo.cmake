@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/oyc/git/helpful/integration/function.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/function.cpp.o"
-  "/home/oyc/git/helpful/integration/main.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/main.cpp.o"
-  "/home/oyc/git/helpful/integration/mv_video_capture.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o"
-  "/home/oyc/git/helpful/integration/nanodet.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/nanodet.cpp.o"
-  "/home/oyc/git/helpful/integration/serialport.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/serialport.cpp.o"
-  "/home/oyc/git/helpful/integration/toInference.cpp" "/home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/toInference.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/function.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/function.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/main.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/main.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/mv_video_capture.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/nanodet.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/nanodet.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/serialport.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/serialport.cpp.o"
+  "/home/oyc/git/engineering/integration_v1.0/toInference.cpp" "/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/toInference.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

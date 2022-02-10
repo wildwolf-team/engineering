@@ -68,13 +68,21 @@ int main()
       switch(2)
       {
         case 2:
+        double t = (double)cv::getTickCount();//开始计时
+
+
+
         cv::Mat resized_img;
         effect_.resize_uniform(src_img_, resized_img, cv::Size(width, height),effect_roi);
         auto results = detector.detect(resized_img, 0.4, 0.5);
         Function::find_mineral(src_img_,results,effect_,effect_roi,1);
+        t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();//结束计时
+        int fps = int(1.0 / t);//转换为帧率
+        cout << "FPS: " << fps<<endl;//输出帧率
         break;
-
+        
       }
+  
       imshow("1",src_img_);
     }
     

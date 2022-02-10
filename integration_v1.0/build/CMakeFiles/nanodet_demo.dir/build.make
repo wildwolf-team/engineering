@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oyc/git/helpful/integration
+CMAKE_SOURCE_DIR = /home/oyc/git/engineering/integration_v1.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oyc/git/helpful/integration/build
+CMAKE_BINARY_DIR = /home/oyc/git/engineering/integration_v1.0/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nanodet_demo.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/nanodet_demo.dir/flags.make
 
 CMakeFiles/nanodet_demo.dir/main.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nanodet_demo.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/main.cpp.o -c /home/oyc/git/helpful/integration/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nanodet_demo.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/main.cpp.o -c /home/oyc/git/engineering/integration_v1.0/main.cpp
 
 CMakeFiles/nanodet_demo.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/main.cpp > CMakeFiles/nanodet_demo.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/main.cpp > CMakeFiles/nanodet_demo.dir/main.cpp.i
 
 CMakeFiles/nanodet_demo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/main.cpp -o CMakeFiles/nanodet_demo.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/main.cpp -o CMakeFiles/nanodet_demo.dir/main.cpp.s
 
 CMakeFiles/nanodet_demo.dir/nanodet.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/nanodet.cpp.o: ../nanodet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nanodet_demo.dir/nanodet.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/nanodet.cpp.o -c /home/oyc/git/helpful/integration/nanodet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nanodet_demo.dir/nanodet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/nanodet.cpp.o -c /home/oyc/git/engineering/integration_v1.0/nanodet.cpp
 
 CMakeFiles/nanodet_demo.dir/nanodet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/nanodet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/nanodet.cpp > CMakeFiles/nanodet_demo.dir/nanodet.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/nanodet.cpp > CMakeFiles/nanodet_demo.dir/nanodet.cpp.i
 
 CMakeFiles/nanodet_demo.dir/nanodet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/nanodet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/nanodet.cpp -o CMakeFiles/nanodet_demo.dir/nanodet.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/nanodet.cpp -o CMakeFiles/nanodet_demo.dir/nanodet.cpp.s
 
 CMakeFiles/nanodet_demo.dir/toInference.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/toInference.cpp.o: ../toInference.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/nanodet_demo.dir/toInference.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/toInference.cpp.o -c /home/oyc/git/helpful/integration/toInference.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/nanodet_demo.dir/toInference.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/toInference.cpp.o -c /home/oyc/git/engineering/integration_v1.0/toInference.cpp
 
 CMakeFiles/nanodet_demo.dir/toInference.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/toInference.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/toInference.cpp > CMakeFiles/nanodet_demo.dir/toInference.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/toInference.cpp > CMakeFiles/nanodet_demo.dir/toInference.cpp.i
 
 CMakeFiles/nanodet_demo.dir/toInference.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/toInference.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/toInference.cpp -o CMakeFiles/nanodet_demo.dir/toInference.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/toInference.cpp -o CMakeFiles/nanodet_demo.dir/toInference.cpp.s
 
 CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o: ../mv_video_capture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o -c /home/oyc/git/helpful/integration/mv_video_capture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o -c /home/oyc/git/engineering/integration_v1.0/mv_video_capture.cpp
 
 CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/mv_video_capture.cpp > CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/mv_video_capture.cpp > CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.i
 
 CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/mv_video_capture.cpp -o CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/mv_video_capture.cpp -o CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.s
 
 CMakeFiles/nanodet_demo.dir/function.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/function.cpp.o: ../function.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nanodet_demo.dir/function.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/function.cpp.o -c /home/oyc/git/helpful/integration/function.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nanodet_demo.dir/function.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/function.cpp.o -c /home/oyc/git/engineering/integration_v1.0/function.cpp
 
 CMakeFiles/nanodet_demo.dir/function.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/function.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/function.cpp > CMakeFiles/nanodet_demo.dir/function.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/function.cpp > CMakeFiles/nanodet_demo.dir/function.cpp.i
 
 CMakeFiles/nanodet_demo.dir/function.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/function.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/function.cpp -o CMakeFiles/nanodet_demo.dir/function.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/function.cpp -o CMakeFiles/nanodet_demo.dir/function.cpp.s
 
 CMakeFiles/nanodet_demo.dir/serialport.cpp.o: CMakeFiles/nanodet_demo.dir/flags.make
 CMakeFiles/nanodet_demo.dir/serialport.cpp.o: ../serialport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nanodet_demo.dir/serialport.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/serialport.cpp.o -c /home/oyc/git/helpful/integration/serialport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nanodet_demo.dir/serialport.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nanodet_demo.dir/serialport.cpp.o -c /home/oyc/git/engineering/integration_v1.0/serialport.cpp
 
 CMakeFiles/nanodet_demo.dir/serialport.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nanodet_demo.dir/serialport.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/helpful/integration/serialport.cpp > CMakeFiles/nanodet_demo.dir/serialport.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oyc/git/engineering/integration_v1.0/serialport.cpp > CMakeFiles/nanodet_demo.dir/serialport.cpp.i
 
 CMakeFiles/nanodet_demo.dir/serialport.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nanodet_demo.dir/serialport.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/helpful/integration/serialport.cpp -o CMakeFiles/nanodet_demo.dir/serialport.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oyc/git/engineering/integration_v1.0/serialport.cpp -o CMakeFiles/nanodet_demo.dir/serialport.cpp.s
 
 # Object files for target nanodet_demo
 nanodet_demo_OBJECTS = \
@@ -213,7 +213,7 @@ nanodet_demo: /usr/local/lib/libopencv_photo.so.4.5.4
 nanodet_demo: /usr/local/lib/libopencv_imgproc.so.4.5.4
 nanodet_demo: /usr/local/lib/libopencv_core.so.4.5.4
 nanodet_demo: CMakeFiles/nanodet_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oyc/git/helpful/integration/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable nanodet_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oyc/git/engineering/integration_v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable nanodet_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanodet_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -226,6 +226,6 @@ CMakeFiles/nanodet_demo.dir/clean:
 .PHONY : CMakeFiles/nanodet_demo.dir/clean
 
 CMakeFiles/nanodet_demo.dir/depend:
-	cd /home/oyc/git/helpful/integration/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oyc/git/helpful/integration /home/oyc/git/helpful/integration /home/oyc/git/helpful/integration/build /home/oyc/git/helpful/integration/build /home/oyc/git/helpful/integration/build/CMakeFiles/nanodet_demo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oyc/git/engineering/integration_v1.0/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oyc/git/engineering/integration_v1.0 /home/oyc/git/engineering/integration_v1.0 /home/oyc/git/engineering/integration_v1.0/build /home/oyc/git/engineering/integration_v1.0/build /home/oyc/git/engineering/integration_v1.0/build/CMakeFiles/nanodet_demo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nanodet_demo.dir/depend
 

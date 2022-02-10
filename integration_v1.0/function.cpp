@@ -22,14 +22,17 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
             if((count[0].x+count[0].br().x)/2<640)//640需要改成转换后的值
             {
                 SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,0);
+                return 1;
             }
             else if((count[0].x+count[0].br().x)/2>640)
             {
                 SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,1);
+                return 1;
             }
             else
             {
                 SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,-1);
+                return 1;
             }
             cout<<(count[0].x+count[0].br().x)/2<<endl;
         }
@@ -55,14 +58,17 @@ int Function::find_mineral(cv::Mat src_img_,const std::vector<BoxInfo>& bboxes ,
                 if((count[num_index].x+count[num_index].br().x)/2<640)
                 {
                     SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,0);
+                    return 1;
                 }
                 else if((count[num_index].x+count[num_index].br().x)/2>640)
                 {
                     SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,1);
+                    return 1;
                 }
                 else
                 {
                     SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,-1);
+                    return 1;
                 }
 
             }

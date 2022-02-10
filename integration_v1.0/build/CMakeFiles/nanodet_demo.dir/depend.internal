@@ -7,7 +7,7 @@ CMakeFiles/nanodet_demo.dir/function.cpp.o
  ../include/nanodet.h
  ../include/serialport.h
  ../include/toInference.hpp
- /home/oyc/git/helpful/integration/function.cpp
+ /home/oyc/git/engineering/integration_v1.0/function.cpp
  /home/oyc/git/ncnn/build/install/include/ncnn/allocator.h
  /home/oyc/git/ncnn/build/install/include/ncnn/benchmark.h
  /home/oyc/git/ncnn/build/install/include/ncnn/blob.h
@@ -140,7 +140,7 @@ CMakeFiles/nanodet_demo.dir/main.cpp.o
  ../include/nanodet.h
  ../include/serialport.h
  ../include/toInference.hpp
- /home/oyc/git/helpful/integration/main.cpp
+ /home/oyc/git/engineering/integration_v1.0/main.cpp
  /home/oyc/git/ncnn/build/install/include/ncnn/allocator.h
  /home/oyc/git/ncnn/build/install/include/ncnn/benchmark.h
  /home/oyc/git/ncnn/build/install/include/ncnn/blob.h
@@ -269,7 +269,7 @@ CMakeFiles/nanodet_demo.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/videoio.hpp
 CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o
  ../include/mv_video_capture.hpp
- /home/oyc/git/helpful/integration/mv_video_capture.cpp
+ /home/oyc/git/engineering/integration_v1.0/mv_video_capture.cpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
@@ -306,7 +306,7 @@ CMakeFiles/nanodet_demo.dir/mv_video_capture.cpp.o
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 CMakeFiles/nanodet_demo.dir/nanodet.cpp.o
  ../include/nanodet.h
- /home/oyc/git/helpful/integration/nanodet.cpp
+ /home/oyc/git/engineering/integration_v1.0/nanodet.cpp
  /home/oyc/git/ncnn/build/install/include/ncnn/allocator.h
  /home/oyc/git/ncnn/build/install/include/ncnn/benchmark.h
  /home/oyc/git/ncnn/build/install/include/ncnn/blob.h
@@ -357,11 +357,11 @@ CMakeFiles/nanodet_demo.dir/nanodet.cpp.o
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 CMakeFiles/nanodet_demo.dir/serialport.cpp.o
  ../include/serialport.h
- /home/oyc/git/helpful/integration/serialport.cpp
+ /home/oyc/git/engineering/integration_v1.0/serialport.cpp
 CMakeFiles/nanodet_demo.dir/toInference.cpp.o
  ../include/nanodet.h
  ../include/toInference.hpp
- /home/oyc/git/helpful/integration/toInference.cpp
+ /home/oyc/git/engineering/integration_v1.0/toInference.cpp
  /home/oyc/git/ncnn/build/install/include/ncnn/allocator.h
  /home/oyc/git/ncnn/build/install/include/ncnn/benchmark.h
  /home/oyc/git/ncnn/build/install/include/ncnn/blob.h

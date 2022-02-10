@@ -1,3 +1,0 @@
-/home/oyc/git/integration_v1.2/build/CMakeFiles/rebuild_cache.dir
-/home/oyc/git/integration_v1.2/build/CMakeFiles/edit_cache.dir
-/home/oyc/git/integration_v1.2/build/CMakeFiles/nanodet_demo.dir

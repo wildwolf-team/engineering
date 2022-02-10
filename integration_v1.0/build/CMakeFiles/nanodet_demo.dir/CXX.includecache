@@ -86,9 +86,19 @@ nanodet.h
 benchmark.h
 -
 
-/home/oyc/git/helpful/integration/function.cpp
+/home/oyc/git/engineering/integration_v1.0/main.cpp
+iostream
+-
+opencv2/opencv.hpp
+-
+opencv2/imgproc/types_c.h
+-
 function.hpp
-/home/oyc/git/helpful/integration/function.hpp
+/home/oyc/git/engineering/integration_v1.0/function.hpp
+serialport.h
+/home/oyc/git/engineering/integration_v1.0/serialport.h
+mv_video_capture.hpp
+/home/oyc/git/engineering/integration_v1.0/mv_video_capture.hpp
 
 /home/oyc/git/ncnn/build/install/include/ncnn/allocator.h
 windows.h
