@@ -1,3 +1,0 @@
-/home/oyc/git/engineering/engineer_v2.5/build/CMakeFiles/rebuild_cache.dir
-/home/oyc/git/engineering/engineer_v2.5/build/CMakeFiles/edit_cache.dir
-/home/oyc/git/engineering/engineer_v2.5/build/CMakeFiles/main.dir
