@@ -1,11 +1,11 @@
 #include "function.hpp"
 
-//传入图像，微调方向，模式（0为空接，1为资源岛）
-int Function::find_mineral(cv::Mat src_img_,int center_x ,int is_arrive,int num )
+//传入图像，是否到达目标值（0未到达，1已到达）
+int Function::find_mineral(cv::Mat src_img_,int is_arrive)
 {
-    cv::Mat img_src = src_img_.clone();
+    Mat img_src = src_img_.clone();
     Mat img = img_src.clone();
-    cv::cvtColor(img,img,CV_BGR2HSV);
+    cvtColor(img,img,CV_BGR2HSV);
     // 矿石参数未给用了会出错
     // 曝光1200 ， 补偿 166, 207, 218
     // 9~10
@@ -18,126 +18,135 @@ int Function::find_mineral(cv::Mat src_img_,int center_x ,int is_arrive,int num 
     // cv::inRange(img,cv::Scalar(10,57,29),cv::Scalar(42,94,72),img);
     // 曝光10000
     // 开场地灯
-    cv::inRange(img,cv::Scalar(17,52,34),cv::Scalar(41,104,77),img);
+    // cv::inRange(img,cv::Scalar(17,52,34),cv::Scalar(41,104,77),img);
+    // 15.办公室
+    inRange(img,Scalar(14,104,47),Scalar(23,149,40),img);
 
-    std::vector<std::vector<cv::Point>> contours;
-    cv::findContours(img,contours,0,1);
-    std::vector<cv::Rect> count;
-    for (size_t j = 0; j < contours.size(); j++)  
-    {    
-        cv::Rect r = cv::boundingRect(contours[j]);
-        if(r.area()>5000)
+    vector<vector<Point>> contours;
+    findContours(img,contours,0,1);
+    vector<Rect> mineral_Rects;
+    for(size_t i = 0 ;i < contours.size();i++)
+    {
+        Rect mineral_Rect = boundingRect(contours[i]);
+        if(mineral_Rect.area() > 5000)
         {
-            
-            count.push_back(r);
-            cv::rectangle(img_src, r, cv::Scalar(255, 0, 255), 2);
-            
-                
+            mineral_Rects.push_back(mineral_Rect);
+            rectangle(img_src,mineral_Rect,Scalar(255,0,255),2);
+
         }
     }
-
-    if(num == 0)//空接 
+// 判断是否到达目标点
+    if(is_arrive == 0)
     {
-
-
-    }
-    else if(num == 1)//资源岛
-    {
-        if(is_arrive == 1)
+        // 矿石个数为0
+        if(mineral_Rects.size() == 0)
         {
-            if(count.size()==1)
+
+        }                                         
+        // 矿石个数为1
+        else if(mineral_Rects.size() == 1)
+        {
+            // 中心点 X值位置
+            int mineral_center = (mineral_Rects[0].x + mineral_Rects[0].br().x)/2;
+            // 向左
+            if(mineral_center < min_limit)
             {
-                if((count[0].x+count[0].br().x)/2<495)//640需要改成转换后的值
+                SerialPort::RMserialWrite(mineral_center,0,0,0);
+            }
+            // 向右
+            else if(mineral_center > max_limit)
+            {
+                SerialPort::RMserialWrite(mineral_center,0,0,1);
+            }
+            // 到达
+            else
+            {
+                SerialPort::RMserialWrite(target_point,0,0,-1);
+                is_arrive = 1;
+            }
+        }
+        // 有多个矿石
+        else 
+        {
+            // 最优矿石数据，索引
+            int mineral_optimal = img.rows;
+            int mineral_index = -1;
+            // 筛选最优矿石
+            for(int i = 0;i < mineral_Rects.size();i++)
+            {
+                int mineral_center = (mineral_Rects[i].x + mineral_Rects[i].br().x)/2;
+                if(abs(mineral_center - target_point) < mineral_optimal)
                 {
-                    SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,0);
+                    mineral_optimal = abs(mineral_center - mineral_center);
+                    mineral_index = i;
                 }
-                else if((count[0].x+count[0].br().x)/2>505)
+            }
+            // 发送最优矿石数据
+            if(mineral_index != -1)
+            {
+                int mineral_center = (mineral_Rects[mineral_index].x+mineral_Rects[mineral_index].br().x)/2;
+                rectangle(img_src,mineral_Rects[mineral_index],Scalar(0,0,255),2);
+                cout<<mineral_center<<endl;
+                if(mineral_center < min_limit)
                 {
-                    SerialPort::RMserialWrite((count[0].x+count[0].br().x)/2,0,0,1);
+                    SerialPort::RMserialWrite(mineral_center,0,0,0);
+                }
+                else if(mineral_center >max_limit)
+                {
+                    SerialPort::RMserialWrite(mineral_center,0,0,1);
+
                 }
                 else
                 {
-                    SerialPort::RMserialWrite(500,0,0,-1);
-                    is_arrive = 0 ;
+                    SerialPort::RMserialWrite(mineral_center,0,0,-1);
+                    is_arrive = 1;
                 }
-                cout<<(count[0].x+count[0].br().x)/2<<endl;
             }
-            else if(count.size()==0)
+            
+        }
+    }
+    // 处理抖动问题
+    else
+    {
+        SerialPort::RMserialWrite(500,0,0,-1);
+        if(mineral_Rects.size() == 0)
+        {
+            
+        }
+        else if(mineral_Rects.size() == 1)
+        {
+            int mineral_center = (mineral_Rects[0].x + mineral_Rects[0].br().x)/2;
+            if(abs(mineral_center - target_point) > 20)
             {
-                return -1;
-            }
-            else
-            {
-                int temp=img.rows,num_index=-1;
-                for(int i=0;i<count.size();i++)
-                {
-                    if(abs((count[i].x+count[i].br().x)/2 - 495)<temp)//640记得改
-                    {
-                        temp = abs((count[i].x+count[i].br().x)/2 - 495);
-                        num_index = i;
-                    }
-                }
-                if(num_index != -1)
-                {   
-                    rectangle(img_src, count[num_index], cv::Scalar(0, 0, 255), 2);
-                    cout<<(count[num_index].x+count[num_index].br().x)/2<<endl;
-                    if((count[num_index].x+count[num_index].br().x)/2<495)
-                    {
-                        SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,0);
-                    }
-                    else if((count[num_index].x+count[num_index].br().x)/2>505)
-                    {
-                        SerialPort::RMserialWrite((count[num_index].x+count[num_index].br().x)/2,0,0,1);
-                    }
-                    else
-                    {
-                        SerialPort::RMserialWrite(500,0,0,-1);
-                        is_arrive = 0;
-                    }
-
-                }
-
-                
-            }
+                is_arrive = 0;
+                cout<<mineral_center<<endl;
+            }   
         }
         else
         {
-            SerialPort::RMserialWrite(500,0,0,-1);
-            if(count.size()==1)
+            int mineral_optimal = img.rows;
+            int mineral_index = -1;
+            for(int i = 0;i < mineral_Rects.size();i++)
             {
-                if(abs((count[0].x+count[0].br().x)/2 - 500) > 15)
-                is_arrive = 1;
-                cout<<(count[0].x+count[0].br().x)/2<<endl;
-
-            }
-            else if(count.size()==0)
-            {
-
-            }
-            else
-            {
-                int temp=img.rows,num_index=-1;
-                for(int i=0;i<count.size();i++)
+                int mineral_center = (mineral_Rects[i].x + mineral_Rects[i].br().x)/2;
+                if(abs(mineral_center - target_point) < mineral_optimal)
                 {
-                    if(abs((count[i].x+count[i].br().x)/2 - 500)<temp)//640记得改
-                    {
-                        temp = abs((count[i].x+count[i].br().x)/2 - 500);
-                        num_index = i;
-                    }
+                    mineral_optimal = abs(mineral_center - mineral_center);
+                    mineral_index = i;
                 }
-                if(num_index != -1)
-                {
-                    if(abs((count[num_index].x+count[num_index].br().x)/2 - 500) > 15)
-                    is_arrive = 1;
-                    cout<<(count[num_index].x+count[num_index].br().x)/2<<endl;
-                }
-
             }
-                    
-
+            if(mineral_index != -1)
+            {
+                int mineral_center = (mineral_Rects[mineral_index].x+mineral_Rects[mineral_index].br().x)/2;
+                if(abs((mineral_Rects[mineral_index].x+mineral_Rects[mineral_index].br().x)/2 - target_point) > 20)
+                {
+                    is_arrive = 0;
+                    cout<<mineral_center<<endl;
+                }
+            }
         }
-    
     }
-   
+
+
     imshow(" ",img_src);
 }

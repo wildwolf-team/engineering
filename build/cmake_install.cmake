@@ -1,4 +1,4 @@
-# Install script for directory: /home/oyc/git/origen_v2.4
+# Install script for directory: /home/oyc/git/engineering
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/oyc/git/origen_v2.4/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/oyc/git/engineering/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

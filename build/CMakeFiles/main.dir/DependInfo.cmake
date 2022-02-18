@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/oyc/git/origen_v2.4/function.cpp" "/home/oyc/git/origen_v2.4/build/CMakeFiles/main.dir/function.cpp.o"
-  "/home/oyc/git/origen_v2.4/main.cpp" "/home/oyc/git/origen_v2.4/build/CMakeFiles/main.dir/main.cpp.o"
-  "/home/oyc/git/origen_v2.4/mv_video_capture.cpp" "/home/oyc/git/origen_v2.4/build/CMakeFiles/main.dir/mv_video_capture.cpp.o"
-  "/home/oyc/git/origen_v2.4/serialport.cpp" "/home/oyc/git/origen_v2.4/build/CMakeFiles/main.dir/serialport.cpp.o"
+  "/home/oyc/git/engineering/function.cpp" "/home/oyc/git/engineering/build/CMakeFiles/main.dir/function.cpp.o"
+  "/home/oyc/git/engineering/main.cpp" "/home/oyc/git/engineering/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/oyc/git/engineering/mv_video_capture.cpp" "/home/oyc/git/engineering/build/CMakeFiles/main.dir/mv_video_capture.cpp.o"
+  "/home/oyc/git/engineering/serialport.cpp" "/home/oyc/git/engineering/build/CMakeFiles/main.dir/serialport.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

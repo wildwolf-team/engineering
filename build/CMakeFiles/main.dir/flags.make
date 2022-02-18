@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = -DFMT_LOCALE
 
-CXX_INCLUDES = -I/home/oyc/git/origen_v2.4/./include -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/home/oyc/git/engineering/./include -isystem /usr/local/include/opencv4 
 

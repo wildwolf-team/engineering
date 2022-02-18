@@ -8,14 +8,10 @@ using namespace std;
 
 int main()
 {
-	mindvision::VideoCapture* mv_capture_ = new mindvision::VideoCapture(mindvision::CameraParam(0, mindvision::RESOLUTION_1280_X_800, mindvision::EXPOSURE_1200));
+	mindvision::VideoCapture* mv_capture_ = new mindvision::VideoCapture(mindvision::CameraParam(0, mindvision::RESOLUTION_1280_X_800, mindvision::EXPOSURE_0000));
   cv::Mat                   src_img_;
-  cv::Mat tempframe, currentframe, previousframe;
-	cv::Mat frame;
-  int framenum = 0;
-  vector <int> last_set;
-  int is_arrive = 1;
   SerialPort serialPort;
+  int is_arrive = 0;
 
   while (1) 
   {
@@ -24,21 +20,15 @@ int main()
     }
     if(!src_img_.empty())
     {
-     
-      int rm_recive[3];
-      SerialPort::RMreceiveData(rm_recive);
-      cout<<"recive  "<<rm_recive[1]<<endl;
       switch(2)
       {
-       
         case 2:
-        Function::find_mineral(src_img_,0,is_arrive,1);
+        Function::find_mineral(src_img_,is_arrive);
         break;
-        
-
       }
+      imshow("1",src_img_);
     }
-    if (cv::waitKey(10) == 'q') 
+    if (cv::waitKey(1) == 'q') 
     {
       return 0;
     }

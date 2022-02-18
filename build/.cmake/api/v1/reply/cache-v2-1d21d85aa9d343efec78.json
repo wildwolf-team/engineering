@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/oyc/git/origen_v2.4/build"
+			"value" : "/home/oyc/git/engineering/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -595,7 +595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/oyc/git/origen_v2.4"
+			"value" : "/home/oyc/git/engineering"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1167,7 +1167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/oyc/git/origen_v2.4/build"
+			"value" : "/home/oyc/git/engineering/build"
 		},
 		{
 			"name" : "main_SOURCE_DIR",
@@ -1179,7 +1179,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/oyc/git/origen_v2.4"
+			"value" : "/home/oyc/git/engineering"
 		}
 	],
 	"kind" : "cache",

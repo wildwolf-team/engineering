@@ -6,7 +6,7 @@ CMakeFiles/main.dir/function.cpp.o
  ../include/function.hpp
  ../include/mv_video_capture.hpp
  ../include/serialport.h
- /home/oyc/git/origen_v2.4/function.cpp
+ /home/oyc/git/engineering/function.cpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp
@@ -120,7 +120,7 @@ CMakeFiles/main.dir/main.cpp.o
  ../include/function.hpp
  ../include/mv_video_capture.hpp
  ../include/serialport.h
- /home/oyc/git/origen_v2.4/main.cpp
+ /home/oyc/git/engineering/main.cpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp
@@ -231,7 +231,7 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/videoio.hpp
 CMakeFiles/main.dir/mv_video_capture.cpp.o
  ../include/mv_video_capture.hpp
- /home/oyc/git/origen_v2.4/mv_video_capture.cpp
+ /home/oyc/git/engineering/mv_video_capture.cpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
@@ -269,7 +269,7 @@ CMakeFiles/main.dir/mv_video_capture.cpp.o
 CMakeFiles/main.dir/serialport.cpp.o
  ../include/configure.h
  ../include/serialport.h
- /home/oyc/git/origen_v2.4/serialport.cpp
+ /home/oyc/git/engineering/serialport.cpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp
