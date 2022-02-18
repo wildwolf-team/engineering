@@ -34,22 +34,9 @@ int main()
         case 2:
         Function::find_mineral(src_img_,0,is_arrive,1);
         break;
-        case 3:
-        tempframe = src_img_.clone();
-        blur(tempframe,tempframe,cv::Size(5,5));
-        framenum++;
-        if(framenum == 1)
-        {
-          cvtColor(tempframe, previousframe, CV_BGR2GRAY);
-        }
-        else
-        {
-          Function::lightAndLight(tempframe,currentframe,previousframe,frame,last_set,framenum);
-        }
-        break;
+        
 
       }
-      // imshow("1",src_img_);
     }
     if (cv::waitKey(10) == 'q') 
     {

@@ -138,6 +138,6 @@ int Function::find_mineral(cv::Mat src_img_,int center_x ,int is_arrive,int num 
         }
     
     }
-  
+   
     imshow(" ",img_src);
 }
