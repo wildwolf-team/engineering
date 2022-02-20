@@ -15,7 +15,8 @@ int main()
 
   while (1) 
   {
-    if (mv_capture_->isindustryimgInput()) {
+    if (mv_capture_->isindustryimgInput()) 
+    {
       src_img_ = mv_capture_->image();
     }
     if(!src_img_.empty())
@@ -36,3 +37,4 @@ int main()
   }
 }
 
+ 

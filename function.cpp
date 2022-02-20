@@ -1,7 +1,7 @@
 #include "function.hpp"
 
 //传入图像，是否到达目标值（0未到达，1已到达）
-int Function::find_mineral(cv::Mat src_img_,int is_arrive)
+int Function::find_mineral(cv::Mat src_img_,int& is_arrive)
 {
     Mat img_src = src_img_.clone();
     Mat img = img_src.clone();
@@ -28,7 +28,7 @@ int Function::find_mineral(cv::Mat src_img_,int is_arrive)
     for(size_t i = 0 ;i < contours.size();i++)
     {
         Rect mineral_Rect = boundingRect(contours[i]);
-        if(mineral_Rect.area() > 5000)
+        if(mineral_Rect.area() > 5000 && MIN(mineral_Rect.x,mineral_Rect.y)/MAX(mineral_Rect.x,mineral_Rect.y) > 0.9)
         {
             mineral_Rects.push_back(mineral_Rect);
             rectangle(img_src,mineral_Rect,Scalar(255,0,255),2);

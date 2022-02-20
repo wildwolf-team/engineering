@@ -14,7 +14,7 @@
 class Function
 {
     public:
-    static int  find_mineral(cv::Mat src_img_,int is_arrive);
+    static int  find_mineral(cv::Mat src_img_,int& is_arrive);
 
 };
 

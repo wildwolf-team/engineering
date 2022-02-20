@@ -94,14 +94,6 @@ serialport.h
 mv_video_capture.hpp
 /home/oyc/git/engineering/mv_video_capture.hpp
 
-/home/oyc/git/engineering/mv_video_capture.cpp
-mv_video_capture.hpp
-/home/oyc/git/engineering/mv_video_capture.hpp
-
-/home/oyc/git/engineering/serialport.cpp
-serialport.h
-/home/oyc/git/engineering/serialport.h
-
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
