@@ -98,7 +98,7 @@ int Function::find_mineral(cv::Mat src_img_,int& is_arrive)
                 }
                 else
                 {
-                    SerialPort::RMserialWrite(mineral_center,0,0,-1);
+                    SerialPort::RMserialWrite(target_point,0,0,-1);
                     is_arrive = 1;
                 }
             }
@@ -108,7 +108,7 @@ int Function::find_mineral(cv::Mat src_img_,int& is_arrive)
     // 处理抖动问题
     else
     {
-        SerialPort::RMserialWrite(500,0,0,-1);
+        SerialPort::RMserialWrite(target_point,0,0,-1);
         if(mineral_Rects.size() == 0)
         {
             
